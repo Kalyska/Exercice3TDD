@@ -8,7 +8,13 @@ namespace ex3TDD.Core
 {
     public class RechercheVille
     {
-        private List<String>? villes;
+        private List<String>? _villes;
+
+        public List<String>? Villes
+        {
+            get { return _villes; }
+            set { _villes = value; }
+        }
 
         public List<String> Rechercher(String mot)
         {
