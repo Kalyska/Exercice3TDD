@@ -22,10 +22,11 @@ namespace ex3TDD.Core
                 throw new NotFoundException();
             else
             {
+                string motModif = mot.Substring(0, 1).ToUpper() + mot.Substring(1);
                 List<String> villesTrouvees = new List<String>();
                 foreach (String ville in Villes)
                 {
-                    if (ville.StartsWith(mot))
+                    if (ville.StartsWith(motModif))
                     {
                         villesTrouvees.Add(ville);
                     }
