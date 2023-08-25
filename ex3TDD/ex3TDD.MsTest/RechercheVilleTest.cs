@@ -40,7 +40,16 @@ namespace ex3TDD.MsTest
         {
             List<String> actual = _rechercheVille.Rechercher("va");
             List<String> expected = new List<String>() { "Valence", "Vancouver" };
-            CollectionAssert.AreEqual(expected, actual);
+            CollectionAssert.IsSubsetOf(expected, actual);
+        }
+
+        // La fonctionnalité de recherche devrait également fonctionner lorsque le texte de recherche n'est qu'une partie d'un nom de ville Par exemple "ape" devrait renvoyer la ville "Budapest"
+        [TestMethod]
+        public void WhenRecherche_PartOfCityName_ReturnCitiesWithRecherche()
+        {
+            List<String> actual = _rechercheVille.Rechercher("ape");
+            List<String> expected = new List<String>() { "Budapest" };
+            CollectionAssert.IsSubsetOf(expected, actual);
         }
     }
 }
