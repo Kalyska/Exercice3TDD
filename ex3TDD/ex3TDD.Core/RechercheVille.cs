@@ -19,12 +19,18 @@ namespace ex3TDD.Core
         public List<String> Rechercher(String mot)
         {
             if (mot.Length < 2)
-            {
                 throw new NotFoundException();
-            }
             else
             {
-                throw new NotImplementedException();
+                List<String> villesTrouvees = new List<String>();
+                foreach (String ville in Villes)
+                {
+                    if (ville.StartsWith(mot))
+                    {
+                        villesTrouvees.Add(ville);
+                    }
+                }
+                return villesTrouvees;
             }
         }
     }
