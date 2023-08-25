@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex3TDD.Core", "ex3TDD.Core\ex3TDD.Core.csproj", "{2A4F3A8E-617D-4344-8907-91E157308C3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ex3TDD.MsTest", "ex3TDD.MsTest\ex3TDD.MsTest.csproj", "{CF976F91-4698-4E90-80BB-77240A38E659}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A4F3A8E-617D-4344-8907-91E157308C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4F3A8E-617D-4344-8907-91E157308C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4F3A8E-617D-4344-8907-91E157308C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4F3A8E-617D-4344-8907-91E157308C3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF976F91-4698-4E90-80BB-77240A38E659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF976F91-4698-4E90-80BB-77240A38E659}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF976F91-4698-4E90-80BB-77240A38E659}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF976F91-4698-4E90-80BB-77240A38E659}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACD27A76-8B0D-4955-A473-0E090147849F}
+	EndGlobalSection
+EndGlobal
