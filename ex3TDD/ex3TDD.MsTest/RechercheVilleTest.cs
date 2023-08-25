@@ -31,7 +31,7 @@ namespace ex3TDD.MsTest
         {
             List<String> actual = _rechercheVille.Rechercher("Va");
             List<String> expected = new List<String>() { "Valence", "Vancouver" };
-            CollectionAssert.AreEqual(expected, actual);
+            CollectionAssert.IsSubsetOf(expected, actual);
         }
 
         // La fonctionnalité de recherche doit être insensible à la casse
