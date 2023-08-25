@@ -18,7 +18,9 @@ namespace ex3TDD.Core
 
         public List<String> Rechercher(String mot)
         {
-            if (mot.Length < 2)
+            if (mot == "*")
+                return Villes;
+            else if (mot.Length < 2)
                 throw new NotFoundException();
             else
             {
