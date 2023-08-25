@@ -51,5 +51,14 @@ namespace ex3TDD.MsTest
             List<String> expected = new List<String>() { "Budapest" };
             CollectionAssert.IsSubsetOf(expected, actual);
         }
+
+        // Si le texte de recherche est un « * » (astérisque), il doit renvoyer tous les noms de ville.
+        [TestMethod]
+        public void WhenRecherche_Asterisk_ReturnAllCities()
+        {
+            List<String> actual = _rechercheVille.Rechercher("*");
+            List<String> expected = _rechercheVille.Villes;
+            CollectionAssert.AreEquivalent(expected, actual);
+        }
     }
 }
