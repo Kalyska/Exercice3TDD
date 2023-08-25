@@ -26,7 +26,7 @@ namespace ex3TDD.Core
                 List<String> villesTrouvees = new List<String>();
                 foreach (String ville in Villes)
                 {
-                    if (ville.StartsWith(motModif))
+                    if (ville.StartsWith(motModif) || ville.Contains(mot))
                     {
                         villesTrouvees.Add(ville);
                     }
