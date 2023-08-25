@@ -22,8 +22,6 @@ namespace ex3TDD.MsTest
         [TestMethod]
         public void WhenRecherche_LessThan2_ThrowNotFoundException()
         {
-            _rechercheVille.Rechercher("a");
-            // si le texte de la recherche contient moins de 2 caractères, une exception est levée de type NotFoundException
             Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a"));
         }
     }

@@ -18,7 +18,14 @@ namespace ex3TDD.Core
 
         public List<String> Rechercher(String mot)
         {
-            throw new NotImplementedException();
+            if (mot.Length < 2)
+            {
+                throw new NotFoundException();
+            }
+            else
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }
