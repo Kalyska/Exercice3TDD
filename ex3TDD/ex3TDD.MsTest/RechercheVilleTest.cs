@@ -24,5 +24,15 @@ namespace ex3TDD.MsTest
         {
             Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a"));
         }
+
+        // Si le texte de recherche est égal ou supérieur à 2 caractères, il doit renvoyer tous les noms de ville commençant par le texte de recherche exact. Par exemple, pour le texte de recherche "Va", la fonction doit renvoyer Valence et Vancouver
+        [TestMethod]
+        public void WhenRecherche_EqualOrMoreThan2_ReturnCitiesStartingWithRecherche()
+        {
+            //Si le texte de recherche est égal ou supérieur à 2 caractères, il doit renvoyer tous les noms de ville commençant par le texte de recherche exact.Par exemple, pour le texte de recherche "Va", la fonction doit renvoyer Valence et Vancouver
+            List<String> actual = _rechercheVille.Rechercher("Va");
+            List<String> expected = new List<String>() { "Valence", "Vancouver" };
+            CollectionAssert.AreEqual(expected, actual);
+        }
     }
 }
