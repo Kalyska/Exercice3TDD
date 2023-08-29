@@ -8,9 +8,9 @@ namespace ex3TDD.Core
 {
     public class RechercheVille
     {
-        private List<String>? _villes;
+        private List<String> _villes = new List<string>();
 
-        public List<String>? Villes
+        public List<String> Villes
         {
             get { return _villes; }
             set { _villes = value; }
@@ -23,18 +23,7 @@ namespace ex3TDD.Core
             else if (mot.Length < 2)
                 throw new NotFoundException();
             else
-            {
-                string motModif = mot.Substring(0, 1).ToUpper() + mot.Substring(1);
-                List<String> villesTrouvees = new List<String>();
-                foreach (String ville in Villes)
-                {
-                    if (ville.StartsWith(motModif) || ville.Contains(mot))
-                    {
-                        villesTrouvees.Add(ville);
-                    }
-                }
-                return villesTrouvees;
-            }
+                return Villes.Where(v => v.ToLower().Contains(mot.ToLower())).ToList();
         }
     }
 }
